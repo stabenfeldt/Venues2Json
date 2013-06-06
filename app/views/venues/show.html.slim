@@ -1,0 +1,27 @@
+p#notice = notice
+
+p
+  strong Title:
+  = @venue.title
+p
+  strong Address:
+  = @venue.address
+p
+  strong Sun from:
+  = @venue.sun_from.strftime '%H:%M'
+p
+  strong Sun to:
+  = @venue.sun_to.strftime '%H:%M'
+p
+  strong Lat:
+  = @venue.lat
+p
+  strong Long:
+  = @venue.long
+p
+  strong Area:
+  = @venue.area.title
+
+= link_to 'Edit', edit_venue_path(@venue)
+'|
+= link_to 'Back', venues_path

@@ -19,8 +19,8 @@ development:
   encoding: unicode
   database: Places2iSola_development
   pool: 5
-  username: Places2iSola
-  password:
+#  username: Places2iSola
+#  password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +48,13 @@ test:
   encoding: unicode
   database: Places2iSola_test
   pool: 5
-  username: Places2iSola
-  password:
+#  username: Places2iSola
+#  password:
 
 production:
   adapter: postgresql
   encoding: unicode
   database: Places2iSola_production
   pool: 5
-  username: Places2iSola
-  password:
+#  username: Places2iSola
+#  password:
