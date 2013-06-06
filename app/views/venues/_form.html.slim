@@ -19,11 +19,17 @@
     = f.label :sun_to
     = f.time_select :sun_to
   .field
-    = f.label :lat
-    = f.text_field :lat
+    = f.label :latitude
+    = f.text_field :latitude
   .field
-    = f.label :long
-    = f.text_field :long
+    = f.label :longitude
+    = f.text_field :longitude
+  .field
+    = f.label :url
+    = f.text_field :url
+  .field
+    = f.label :image_url
+    = f.text_field :image_url
   br
   .field
     = f.collection_select :area_id, Area.all, :id, :title, prompt: true

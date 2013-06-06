@@ -14,13 +14,18 @@ p
   = @venue.sun_to.strftime '%H:%M'
 p
   strong Lat:
-  = @venue.lat
+  = @venue.latitude
 p
   strong Long:
-  = @venue.long
+  = @venue.longitude
 p
   strong Area:
   = @venue.area.title
+p
+  strong URL:
+  = @venue.url
+p
+  = image_tag @venue.image_url
 
 = link_to 'Edit', edit_venue_path(@venue)
 '|

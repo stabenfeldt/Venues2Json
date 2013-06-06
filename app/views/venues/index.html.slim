@@ -9,6 +9,8 @@ table
     th Lat
     th Long
     th Area
+    th URL
+    th Image URL
     th
     th
     th
@@ -19,9 +21,11 @@ table
       td = venue.address
       td = venue.sun_from
       td = venue.sun_to
-      td = venue.lat
-      td = venue.long
-      td = venue.area
+      td = venue.latitude
+      td = venue.longitude
+      td = venue.url
+      td = venue.image_url
+      td = venue.area.title rescue nil
       td = link_to 'Show', venue
       td = link_to 'Edit', edit_venue_path(venue)
       td = link_to 'Destroy', venue, :confirm => 'Are you sure?', :method => :delete
