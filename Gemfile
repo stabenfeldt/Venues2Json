@@ -40,6 +40,8 @@ gem 'rspec-rails'
 
 gem 'slim'
 gem 'slim-rails'
+gem "geocoder"
+
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
