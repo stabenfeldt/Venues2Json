@@ -42,7 +42,7 @@ class VenuesController < ApplicationController
   def update
     respond_to do |format|
       if @venue.update(venue_params)
-        format.html { redirect_to venues, notice: 'Venue was successfully updated.' }
+        format.html { redirect_to venues_path, notice: 'Venue was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -56,7 +56,7 @@ class VenuesController < ApplicationController
   def destroy
     @venue.destroy
     respond_to do |format|
-      format.html { redirect_to venues_url }
+      format.html { redirect_to venues_path }
       format.json { head :no_content }
     end
   end
