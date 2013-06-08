@@ -1,6 +1,6 @@
 h1 Listing venues
 
-table
+table.table.table-striped
   tr
     th Title
     th Address
@@ -11,25 +11,25 @@ table
     th Area
     th URL
     th Image URL
-    th
-    th
-    th
+    th Actions
 
   - @venues.each do |venue|
     tr
       td = venue.title
       td = venue.address
-      td = venue.sun_from
-      td = venue.sun_to
+      td = venue.sun_from.strftime '%H:%M'
+      td = venue.sun_to.strftime '%H:%M'
       td = venue.latitude
       td = venue.longitude
-      td = venue.url
-      td = venue.image_url
       td = venue.area.title rescue nil
-      td = link_to 'Show', venue
-      td = link_to 'Edit', edit_venue_path(venue)
-      td = link_to 'Destroy', venue, :confirm => 'Are you sure?', :method => :delete
+      td = venue.url
+      td = image_tag venue.image_url
+      td
+        btn-group
+          = link_to 'Show', venue, class: 'btn btn-mini'
+          = link_to 'Edit', edit_venue_path(venue), class: 'btn btn-mini'
+          = link_to 'Destroy', venue, :confirm => 'Are you sure?', :method => :delete, class: 'btn btn-mini'
 
 br
 
-= link_to 'New Venue', new_venue_path
+= link_to 'New Venue', new_venue_path, class: 'btn btn-primary'
