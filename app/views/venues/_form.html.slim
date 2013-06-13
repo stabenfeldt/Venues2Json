@@ -12,12 +12,12 @@
   .field
     = f.label :address
     = f.text_field :address
-  .field
+  /.field
     = f.label :sun_from
-    = f.time_select :sun_from
-  .field
+    = f.time_select :sun_from, {:minute_step => 5}
+  /.field
     = f.label :sun_to
-    = f.time_select :sun_to
+    = f.time_select :sun_to, {:minute_step => 5}
   /.field
     = f.label :latitude
     = f.text_field :latitude
