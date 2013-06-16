@@ -17,8 +17,8 @@ table.table.table-striped
     tr
       td = venue.title
       td = venue.address
-      td = venue.sun_from.strftime '%H:%M'
-      td = venue.sun_to.strftime '%H:%M'
+      td = venue.sun_from.strftime '%H:%M' rescue nil  
+      td = venue.sun_to.strftime '%H:%M'   rescue nil
       td = venue.latitude
       td = venue.longitude
       td = venue.area.title rescue nil
