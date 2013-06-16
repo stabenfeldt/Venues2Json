@@ -42,6 +42,8 @@ gem 'rspec-rails'
 gem 'slim'
 gem 'slim-rails'
 gem "geocoder"
+gem 'nokogiri'
+gem 'google-search'
 
 
 # Use Capistrano for deployment
