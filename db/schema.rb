@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130608101653) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20130618142510) do
 
   create_table "areas", force: true do |t|
     t.string   "title"
@@ -34,6 +31,7 @@ ActiveRecord::Schema.define(version: 20130608101653) do
     t.float    "latitude"
     t.string   "url"
     t.string   "image_url"
+    t.boolean  "confirmed"
   end
 
   add_index "venues", ["area_id"], name: "index_venues_on_area_id", using: :btree

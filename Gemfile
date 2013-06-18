@@ -44,6 +44,7 @@ gem 'slim-rails'
 gem "geocoder"
 gem 'nokogiri'
 gem 'google-search'
+gem 'simple_form'
 
 
 # Use Capistrano for deployment
