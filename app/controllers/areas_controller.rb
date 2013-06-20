@@ -1,10 +1,20 @@
+require 'create_hash'
+
 class AreasController < ApplicationController
   before_action :set_area, only: [:show, :edit, :update, :destroy]
+  layout nil
+  layout 'application', :except => :export
 
   # GET /areas
   # GET /areas.json
   def index
     @areas = Area.all
+  end
+
+  def export
+    h = CreateHash.new
+    @json = h.work
+    render :layout => false
   end
 
   # GET /areas/1
