@@ -11,19 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130618142510) do
+ActiveRecord::Schema.define(version: 20130620050501) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "areas", force: true do |t|
-    t.string   "title"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "venues", force: true do |t|
-    t.string   "title"
+    t.string   "name"
     t.string   "address"
     t.time     "sun_from",   default: '2000-01-01 08:00:00'
     t.time     "sun_to",     default: '2000-01-01 23:30:00'

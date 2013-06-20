@@ -15,13 +15,13 @@ table.table.table-striped
 
   - @venues.each do |venue|
     tr
-      td = venue.title
+      td = venue.name
       td = venue.address
       td = venue.sun_from.strftime '%H:%M' rescue nil  
       td = venue.sun_to.strftime '%H:%M'   rescue nil
       td = venue.latitude
       td = venue.longitude
-      td = venue.area.title rescue nil
+      td = venue.area.name rescue nil
       td = venue.url
       td = image_tag venue.image_url
       td

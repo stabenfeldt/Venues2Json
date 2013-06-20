@@ -9,7 +9,7 @@ table
 
   - @areas.each do |area|
     tr
-      td = area.title
+      td = area.name
       td = link_to 'Show', area
       td = link_to 'Edit', edit_area_path(area)
       td = link_to 'Destroy', area, :confirm => 'Are you sure?', :method => :delete

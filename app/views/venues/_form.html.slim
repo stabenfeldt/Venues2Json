@@ -6,7 +6,7 @@
         - @venue.errors.full_messages.each do |message|
           li = message
 
-  = f.input :title
+  = f.input :name
   br
   = f.input :confirmed
   br
@@ -15,6 +15,6 @@
   /= f.input :image_url
   br
   .field
-    = f.collection_select :area_id, Area.all, :id, :title, prompt: true
+    = f.collection_select :area_id, Area.all, :id, :name, prompt: true
     
   .actions = f.submit 'Save', class: 'btn btn-primary'
