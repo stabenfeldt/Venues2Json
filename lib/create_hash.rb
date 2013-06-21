@@ -20,14 +20,11 @@ class CreateHash
   def work
     @final = []
     Area.all.each do |area|
-      puts "area: #{area.name}"
       @r = {}
       @r[:name]   = area.name
       @r[:venues] = area.venues.map { |v| output_venue(v) }
-      puts "One is #{@r}"
       @final << @r
     end
-    #@r.to_json
     @final.to_json
   end
 
