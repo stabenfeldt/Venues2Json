@@ -42,7 +42,7 @@ gem 'rspec-rails'
 gem 'slim'
 gem 'slim-rails'
 gem "geocoder"
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.13.2'
 gem 'google-search'
 gem 'simple_form'
 
