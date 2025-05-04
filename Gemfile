@@ -37,7 +37,7 @@ end
 gem 'unicorn'
 gem 'fabrication'
 gem 'rspec'
-gem 'rspec-rails'
+gem 'rspec-rails', '>= 8.0.0'
 
 gem 'slim'
 gem 'slim-rails'
